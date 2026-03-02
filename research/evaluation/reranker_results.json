@@ -1,0 +1,17 @@
+{
+  "BASELINE": {
+    "points": 20,
+    "bullseyes": 1,
+    "goods": 18
+  },
+  "RERANKED": {
+    "points": 21,
+    "bullseyes": 3,
+    "goods": 15
+  },
+  "EXPAND+RERANK": {
+    "points": 33,
+    "bullseyes": 5,
+    "goods": 23
+  }
+}

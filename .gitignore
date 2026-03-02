@@ -1,0 +1,16 @@
+data/raw/
+data/processed/
+data/embeddings/
+models/
+research/data_prep/data_prep/
+*.pt
+*checkpoint*.json
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.env
+*.env
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,22 @@
+# Core dependencies shared across research and app.
+# Pinning major versions for reproducibility.
+
+# Data
+pandas>=2.0
+numpy>=1.24
+pyarrow                 # Parquet read/write — columnar format is faster than CSV
+                        # for our use case (we often read subsets of columns)
+pyyaml                  # Config parsing
+
+# ML / Embeddings
+torch>=2.0              # Primary training framework
+sentence-transformers   # Pretrained text encoders (baseline + starting point for fine-tuning)
+faiss-cpu               # Vector similarity search. Use faiss-gpu if you have CUDA.
+
+# API
+requests                # TMDB API calls
+tqdm                    # Progress bars for long pipeline runs
+
+# Data exploration
+matplotlib
+seaborn

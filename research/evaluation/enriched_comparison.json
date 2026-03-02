@@ -1,0 +1,22 @@
+{
+  "ORIGINAL": {
+    "points": 22,
+    "bullseyes": 1,
+    "goods": 20
+  },
+  "ORIG+EXPAND": {
+    "points": 23,
+    "bullseyes": 1,
+    "goods": 21
+  },
+  "ENRICHED": {
+    "points": 22,
+    "bullseyes": 1,
+    "goods": 20
+  },
+  "ENR+EXPAND": {
+    "points": 23,
+    "bullseyes": 1,
+    "goods": 21
+  }
+}

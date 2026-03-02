@@ -1,0 +1,14 @@
+# Additional dependencies for research/experimentation only.
+# Not needed in production.
+
+-r requirements-core.txt
+
+jax[cpu]                # JAX reimplementation for benchmarking
+jaxlib
+optax                   # JAX optimizers (Adam, etc.)
+
+wandb                   # Experiment tracking
+scikit-learn            # Evaluation metrics, t-SNE
+umap-learn              # Embedding visualization
+
+jupyterlab              # Notebooks for EDA

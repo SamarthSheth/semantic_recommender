@@ -1,0 +1,59 @@
+# Configuration for the semantic recommendation pipeline
+# Every parameter that affects data or model behavior lives here.
+# This makes experiments reproducible — commit this file with your results.
+
+data:
+  # MovieLens filtering
+  movielens_version: "ml-25m"           # ml-25m has 25M ratings, ml-latest-small for quick dev
+  min_ratings_per_movie: 50             # Drop obscure movies with few ratings.
+                                        # Why 50: balances catalog size (~8-10K movies) with
+                                        # having enough signal that these are "real" movies
+                                        # people know. Too low → noise. Too high → tiny catalog.
+  min_avg_rating: 2.5                   # Drop universally disliked movies.
+                                        # We're building a recommendation system, not a
+                                        # "worst movies" finder. 2.5 is generous — keeps
+                                        # polarizing films that some people love.
+
+  # TMDB API
+  tmdb_max_reviews_per_movie: 20        # Cap reviews per movie to avoid data imbalance.
+                                        # Popular movies have thousands of reviews;
+                                        # indie films have 5. Capping evens this out.
+  tmdb_rate_limit_delay: 0.05           # Seconds between API calls. TMDB allows ~40 req/sec.
+                                        # 0.05s = 20 req/sec, staying safely under the limit.
+
+  # Processing
+  min_overview_length: 50               # Characters. Some TMDB entries have placeholder
+                                        # overviews like "No overview available." Filter these.
+  text_language: "en"                   # Only keep English-language text for consistent embeddings.
+
+model:
+  # Embedding model for baseline
+  baseline_model: "all-MiniLM-L6-v2"   # Why this model: 384-dim embeddings, fast inference,
+                                        # strong performance on semantic similarity benchmarks.
+                                        # Good starting point before we consider fine-tuning.
+                                        # Alternative: "all-mpnet-base-v2" (768-dim, slower, better)
+  embedding_dim: 384                    # Must match the model above.
+
+  # FAISS index
+  faiss_index_type: "IVFFlat"           # Approximate nearest neighbors. IVFFlat is a good
+                                        # middle ground — exact search (Flat) is too slow at
+                                        # scale, HNSW uses more memory. IVFFlat lets us
+                                        # trade accuracy for speed by adjusting nprobe.
+  faiss_nlist: 100                      # Number of Voronoi cells. Rule of thumb: sqrt(n_items).
+                                        # For ~10K movies, 100 is reasonable.
+  faiss_nprobe: 10                      # How many cells to search at query time.
+                                        # 10/100 = searching 10% of the index. Fast and accurate
+                                        # enough for our catalog size.
+
+evaluation:
+  top_k_values: [5, 10, 20]            # Evaluate retrieval at these cutoffs.
+  test_split_date: "2019-01-01"         # Temporal split: train on ratings before this date,
+                                        # test on after. Why temporal: avoids data leakage.
+                                        # A random split would let the model "see" future
+                                        # preferences during training.
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  embeddings: "data/embeddings"
+  models: "models"

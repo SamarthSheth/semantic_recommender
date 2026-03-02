@@ -1,0 +1,2287 @@
+{
+  "test_queries": [
+    {
+      "query": "a dark psychological thriller with an unreliable narrator",
+      "type": "genre+concept",
+      "expected": [
+        "Fight Club",
+        "Shutter Island",
+        "Black Swan",
+        "Gone Girl",
+        "Memento",
+        "Sixth Sense"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Copycat (1995)",
+              0.617143988609314
+            ],
+            [
+              "Howling, The (1980)",
+              0.6101944446563721
+            ],
+            [
+              "Sixth Sense, The (1999)",
+              0.5975824594497681
+            ],
+            [
+              "Images (1972)",
+              0.5939046144485474
+            ],
+            [
+              "6 Souls (Shelter) (2010)",
+              0.5933589935302734
+            ],
+            [
+              "Business of Strangers, The (2001)",
+              0.5932861566543579
+            ],
+            [
+              "Don't Torture a Duckling (Non si sevizia un paperino) (1972)",
+              0.5924408435821533
+            ],
+            [
+              "Miracle Worker, The (1962)",
+              0.591171383857727
+            ],
+            [
+              "Singing Detective, The (2003)",
+              0.5893343687057495
+            ],
+            [
+              "Cell, The (2000)",
+              0.5853748321533203
+            ]
+          ],
+          "expected_found": [
+            "Sixth Sense"
+          ]
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Copycat (1995)",
+              0.617143988609314
+            ],
+            [
+              "Howling, The (1980)",
+              0.6101944446563721
+            ],
+            [
+              "Sixth Sense, The (1999)",
+              0.5975824594497681
+            ],
+            [
+              "Images (1972)",
+              0.5939046144485474
+            ],
+            [
+              "6 Souls (Shelter) (2010)",
+              0.5933589935302734
+            ],
+            [
+              "Business of Strangers, The (2001)",
+              0.5932861566543579
+            ],
+            [
+              "Don't Torture a Duckling (Non si sevizia un paperino) (1972)",
+              0.5924408435821533
+            ],
+            [
+              "Miracle Worker, The (1962)",
+              0.591171383857727
+            ],
+            [
+              "Singing Detective, The (2003)",
+              0.5893343687057495
+            ],
+            [
+              "Cell, The (2000)",
+              0.5853748321533203
+            ]
+          ],
+          "expected_found": [
+            "Sixth Sense"
+          ]
+        },
+        "expanded": {
+          "expanded_query": "a dark psychological thriller with an unreliable narrator. A tense, cerebral thriller that deliberately manipulates audience perception through a protagonist whose grip on reality is questionable. Expect atmospheric cinematography, slow-burn tension, and narrative twists that recontextualize earlier scenes. Explores themes of paranoia, mental deterioration, guilt, or fractured identity\u2014keeping viewers uncertain about what's real until a destabilizing final revelation.",
+          "results": [
+            [
+              "Cell, The (2000)",
+              0.6430436372756958
+            ],
+            [
+              "Take Shelter (2011)",
+              0.6306009888648987
+            ],
+            [
+              "Business of Strangers, The (2001)",
+              0.6277530193328857
+            ],
+            [
+              "Insidious (2010)",
+              0.625535249710083
+            ],
+            [
+              "Mr. Brooks (2007)",
+              0.6227511167526245
+            ],
+            [
+              "Images (1972)",
+              0.6195766925811768
+            ],
+            [
+              "Howling, The (1980)",
+              0.6150611639022827
+            ],
+            [
+              "Midnight Meat Train, The (2008)",
+              0.6130177974700928
+            ],
+            [
+              "It Comes at Night (2017)",
+              0.6066827774047852
+            ],
+            [
+              "Don't Torture a Duckling (Non si sevizia un paperino) (1972)",
+              0.6031264066696167
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "feel-good comedy about friendship and growing up",
+      "type": "mood+theme",
+      "expected": [
+        "Superbad",
+        "Stand by Me",
+        "The Breakfast Club",
+        "Ferris Bueller",
+        "Dazed and Confused"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Everybody Wants Some (2016)",
+              0.717918872833252
+            ],
+            [
+              "Last American Virgin, The (1982)",
+              0.6489294767379761
+            ],
+            [
+              "St. Vincent (2014)",
+              0.6271335482597351
+            ],
+            [
+              "Beaches (1988)",
+              0.6152970790863037
+            ],
+            [
+              "Paper Man (2009)",
+              0.6035934686660767
+            ],
+            [
+              "All Over the Guy (2001)",
+              0.6031567454338074
+            ],
+            [
+              "Life During Wartime (2009)",
+              0.5967551469802856
+            ],
+            [
+              "Superbad (2007)",
+              0.5929219126701355
+            ],
+            [
+              "Queens Logic (1991)",
+              0.5924856066703796
+            ],
+            [
+              "Ghost World (2001)",
+              0.5890119671821594
+            ]
+          ],
+          "expected_found": [
+            "Superbad"
+          ]
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Everybody Wants Some (2016)",
+              0.717918872833252
+            ],
+            [
+              "Last American Virgin, The (1982)",
+              0.6489294767379761
+            ],
+            [
+              "St. Vincent (2014)",
+              0.6271335482597351
+            ],
+            [
+              "Beaches (1988)",
+              0.6152970790863037
+            ],
+            [
+              "Paper Man (2009)",
+              0.6035934686660767
+            ],
+            [
+              "All Over the Guy (2001)",
+              0.6031567454338074
+            ],
+            [
+              "Life During Wartime (2009)",
+              0.5967551469802856
+            ],
+            [
+              "Superbad (2007)",
+              0.5929219126701355
+            ],
+            [
+              "Queens Logic (1991)",
+              0.5924856066703796
+            ],
+            [
+              "Ghost World (2001)",
+              0.5890119671821594
+            ]
+          ],
+          "expected_found": [
+            "Superbad"
+          ]
+        },
+        "expanded": {
+          "expanded_query": "feel-good comedy about friendship and growing up. A lighthearted comedy celebrating the bonds between friends navigating life's transitions\u2014whether entering adulthood, starting new chapters, or rediscovering each other. Warm, humorous tone with heart, balancing comedic set pieces with genuine emotional moments. Features ensemble casts of relatable characters in coming-of-age scenarios, exploring themes of loyalty, self-discovery, and how friendships shape who we become.",
+          "results": [
+            [
+              "Everybody Wants Some (2016)",
+              0.7180684208869934
+            ],
+            [
+              "Last American Virgin, The (1982)",
+              0.6602540612220764
+            ],
+            [
+              "All Over the Guy (2001)",
+              0.6295459270477295
+            ],
+            [
+              "Beaches (1988)",
+              0.6270149946212769
+            ],
+            [
+              "Paper Man (2009)",
+              0.6235345005989075
+            ],
+            [
+              "Miss You Already (2015)",
+              0.6101237535476685
+            ],
+            [
+              "Ghost World (2001)",
+              0.5993021726608276
+            ],
+            [
+              "Carnage (2011)",
+              0.5908020734786987
+            ],
+            [
+              "Grown Ups (2010)",
+              0.5858750939369202
+            ],
+            [
+              "Queens Logic (1991)",
+              0.5843251347541809
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "visually stunning sci-fi epic about space exploration",
+      "type": "style+genre",
+      "expected": [
+        "Interstellar",
+        "2001",
+        "Gravity",
+        "Arrival",
+        "The Martian",
+        "Ad Astra"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Star Trek Beyond (2016)",
+              0.6262400150299072
+            ],
+            [
+              "The Cloverfield Paradox (2018)",
+              0.6171001195907593
+            ],
+            [
+              "Prometheus (2012)",
+              0.611506462097168
+            ],
+            [
+              "The Inhabited Island (2008)",
+              0.5995264053344727
+            ],
+            [
+              "Destiny in Space (1994)",
+              0.5939294695854187
+            ],
+            [
+              "Interstellar (2014)",
+              0.5800206661224365
+            ],
+            [
+              "2010: The Year We Make Contact (1984)",
+              0.5746217966079712
+            ],
+            [
+              "Mission to Mars (2000)",
+              0.5734595656394958
+            ],
+            [
+              "Rocketship X-M (1950)",
+              0.569112241268158
+            ],
+            [
+              "This Island Earth (1955)",
+              0.5680022239685059
+            ]
+          ],
+          "expected_found": [
+            "Interstellar"
+          ]
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Star Trek Beyond (2016)",
+              0.6262400150299072
+            ],
+            [
+              "The Cloverfield Paradox (2018)",
+              0.6171001195907593
+            ],
+            [
+              "Prometheus (2012)",
+              0.611506462097168
+            ],
+            [
+              "The Inhabited Island (2008)",
+              0.5995264053344727
+            ],
+            [
+              "Destiny in Space (1994)",
+              0.5939294695854187
+            ],
+            [
+              "Interstellar (2014)",
+              0.5800206661224365
+            ],
+            [
+              "2010: The Year We Make Contact (1984)",
+              0.5746217966079712
+            ],
+            [
+              "Mission to Mars (2000)",
+              0.5734595656394958
+            ],
+            [
+              "Rocketship X-M (1950)",
+              0.569112241268158
+            ],
+            [
+              "This Island Earth (1955)",
+              0.5680022239685059
+            ]
+          ],
+          "expected_found": [
+            "Interstellar"
+          ]
+        },
+        "expanded": {
+          "expanded_query": "visually stunning sci-fi epic about space exploration. A grand-scale science fiction spectacle with breathtaking cinematography and ambitious world-building. Features expansive space vistas, advanced visual effects, and exploration of distant planets or cosmic frontiers. Epic in scope and pacing, blending wonder and discovery with themes of human ambition, survival, and our place in the universe\u2014emphasizing spectacle and imagination alongside character-driven narrative.",
+          "results": [
+            [
+              "The Cloverfield Paradox (2018)",
+              0.6717779636383057
+            ],
+            [
+              "Star Trek Beyond (2016)",
+              0.6606423854827881
+            ],
+            [
+              "Prometheus (2012)",
+              0.6456094980239868
+            ],
+            [
+              "Destiny in Space (1994)",
+              0.6397165060043335
+            ],
+            [
+              "The Inhabited Island (2008)",
+              0.6155929565429688
+            ],
+            [
+              "Interstellar (2014)",
+              0.6045226454734802
+            ],
+            [
+              "This Island Earth (1955)",
+              0.6018894910812378
+            ],
+            [
+              "Star Trek: Insurrection (1998)",
+              0.5961940884590149
+            ],
+            [
+              "Mission to Mars (2000)",
+              0.5913750529289246
+            ],
+            [
+              "Human (2015)",
+              0.5890241265296936
+            ]
+          ],
+          "expected_found": [
+            "Interstellar"
+          ]
+        }
+      }
+    },
+    {
+      "query": "quiet, melancholic drama set in a small town",
+      "type": "mood+setting",
+      "expected": [
+        "Manchester by the Sea",
+        "Nebraska",
+        "Nomadland",
+        "Three Billboards",
+        "Winter's Bone"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Sweet Hereafter, The (1997)",
+              0.6017504930496216
+            ],
+            [
+              "Johnny Belinda (1948)",
+              0.5929410457611084
+            ],
+            [
+              "Rock of Ages (2012)",
+              0.5862534642219543
+            ],
+            [
+              "Kings Row (1942)",
+              0.5859813690185547
+            ],
+            [
+              "Werckmeister Harmonies (Werckmeister harm\u00f3ni\u00e1k) (2000)",
+              0.5809868574142456
+            ],
+            [
+              "It (2017)",
+              0.5769037008285522
+            ],
+            [
+              "Pollyanna (1960)",
+              0.5683520436286926
+            ],
+            [
+              "Kidulthood (2006)",
+              0.5680217742919922
+            ],
+            [
+              "Our Town (1940)",
+              0.560248613357544
+            ],
+            [
+              "Satan's Tango (S\u00e1t\u00e1ntang\u00f3) (1994)",
+              0.557341992855072
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Affliction (1997)",
+              0.6427310705184937
+            ],
+            [
+              "Sweet Hereafter, The (1997)",
+              0.6017504930496216
+            ],
+            [
+              "Johnny Belinda (1948)",
+              0.5929410457611084
+            ],
+            [
+              "Rock of Ages (2012)",
+              0.5862534642219543
+            ],
+            [
+              "Kings Row (1942)",
+              0.5859813690185547
+            ],
+            [
+              "Invasion of the Body Snatchers (1956)",
+              0.5846371650695801
+            ],
+            [
+              "Werckmeister Harmonies (Werckmeister harm\u00f3ni\u00e1k) (2000)",
+              0.5809868574142456
+            ],
+            [
+              "Bye Bye Birdie (1963)",
+              0.5771322250366211
+            ],
+            [
+              "It (2017)",
+              0.5769037008285522
+            ],
+            [
+              "Waitress (2007)",
+              0.569263219833374
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "quiet, melancholic drama set in a small town. A subdued, introspective drama anchored in rural or small-town settings where isolation and stagnation shape character dynamics. Features understated performances, naturalistic dialogue, and contemplative pacing that lingers on moments of quiet tension or resigned acceptance. Explores themes of lost dreams, limited opportunities, unspoken longing, or the weight of community expectations on individuals navigating seemingly ordinary lives.",
+          "results": [
+            [
+              "Maborosi (Maboroshi no hikari) (1995)",
+              0.6083667874336243
+            ],
+            [
+              "Our Town (1940)",
+              0.6055149435997009
+            ],
+            [
+              "In a Better World (H\u00e6vnen) (2010)",
+              0.5940241813659668
+            ],
+            [
+              "Kings Row (1942)",
+              0.5899913907051086
+            ],
+            [
+              "Sweet Hereafter, The (1997)",
+              0.5669161081314087
+            ],
+            [
+              "Central Station (Central do Brasil) (1998)",
+              0.5609206557273865
+            ],
+            [
+              "As it is in Heaven (S\u00e5 som i himmelen) (2004)",
+              0.5561437010765076
+            ],
+            [
+              "Informers, The (2008)",
+              0.5537606477737427
+            ],
+            [
+              "Pollyanna (1960)",
+              0.5502640008926392
+            ],
+            [
+              "Separate Tables (1958)",
+              0.543357253074646
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "fast-paced heist movie with clever twists",
+      "type": "pace+genre",
+      "expected": [
+        "Ocean's Eleven",
+        "The Italian Job",
+        "Inside Man",
+        "Heat",
+        "Baby Driver",
+        "Now You See Me"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Getaway, The (1994)",
+              0.5714523792266846
+            ],
+            [
+              "Foolproof (2003)",
+              0.567978024482727
+            ],
+            [
+              "Getaway, The (1972)",
+              0.5458128452301025
+            ],
+            [
+              "Blood and Wine (Blood & Wine) (1996)",
+              0.5358771085739136
+            ],
+            [
+              "Score, The (2001)",
+              0.5255228281021118
+            ],
+            [
+              "Usual Suspects, The (1995)",
+              0.5247849225997925
+            ],
+            [
+              "Thunderbolt and Lightfoot (1974)",
+              0.5159541964530945
+            ],
+            [
+              "Collector, The (2009)",
+              0.5148295760154724
+            ],
+            [
+              "Asphalt Jungle, The (1950)",
+              0.5110135078430176
+            ],
+            [
+              "Now You See Me (2013)",
+              0.5102278590202332
+            ]
+          ],
+          "expected_found": [
+            "Now You See Me"
+          ]
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Getaway, The (1994)",
+              0.5714523792266846
+            ],
+            [
+              "Foolproof (2003)",
+              0.567978024482727
+            ],
+            [
+              "American Animals (2018)",
+              0.5487431287765503
+            ],
+            [
+              "Getaway, The (1972)",
+              0.5458128452301025
+            ],
+            [
+              "Blood and Wine (Blood & Wine) (1996)",
+              0.5358771085739136
+            ],
+            [
+              "Score, The (2001)",
+              0.5255228281021118
+            ],
+            [
+              "Triple Frontier (2019)",
+              0.5249794721603394
+            ],
+            [
+              "Usual Suspects, The (1995)",
+              0.5247849225997925
+            ],
+            [
+              "Thunderbolt and Lightfoot (1974)",
+              0.5159541964530945
+            ],
+            [
+              "Collector, The (2009)",
+              0.5148295760154724
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "fast-paced heist movie with clever twists. A high-octane heist thriller with sharp editing and propulsive momentum, featuring intricate plot mechanics and unexpected narrative reversals. Ensemble cast of cunning characters executing elaborate schemes with intelligence and style, set against tense sequences of meticulous planning and execution. Quick-witted dialogue, stylish direction, and multiple reveals that recontextualize earlier events, keeping audiences engaged and guessing until the final moments.",
+          "results": [
+            [
+              "Foolproof (2003)",
+              0.6076898574829102
+            ],
+            [
+              "Getaway, The (1994)",
+              0.5936199426651001
+            ],
+            [
+              "Den of Thieves (2018)",
+              0.5900266170501709
+            ],
+            [
+              "Now You See Me (2013)",
+              0.5732252597808838
+            ],
+            [
+              "Blood and Wine (Blood & Wine) (1996)",
+              0.570293664932251
+            ],
+            [
+              "Getaway, The (1972)",
+              0.5646541118621826
+            ],
+            [
+              "Usual Suspects, The (1995)",
+              0.551423192024231
+            ],
+            [
+              "Bandidas (2006)",
+              0.5411678552627563
+            ],
+            [
+              "Score, The (2001)",
+              0.5374581217765808
+            ],
+            [
+              "Asphalt Jungle, The (1950)",
+              0.5347277522087097
+            ]
+          ],
+          "expected_found": [
+            "Now You See Me"
+          ]
+        }
+      }
+    },
+    {
+      "query": "something that feels like a rainy Sunday afternoon",
+      "type": "vibes",
+      "expected": [
+        "Lost in Translation",
+        "Her",
+        "Eternal Sunshine",
+        "Amelie",
+        "In the Mood for Love"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Blue Umbrella, The (2013)",
+              0.5058957934379578
+            ],
+            [
+              "Day & Night (2010)",
+              0.4060131013393402
+            ],
+            [
+              "L.A. Story (1991)",
+              0.4021029472351074
+            ],
+            [
+              "Good Old Fashioned Orgy, A (2011)",
+              0.3533923029899597
+            ],
+            [
+              "The Duke of Burgundy (2014)",
+              0.3464430272579193
+            ],
+            [
+              "After Life (Wandafuru raifu) (1998)",
+              0.3275647461414337
+            ],
+            [
+              "Eden Lake (2008)",
+              0.3231945037841797
+            ],
+            [
+              "It's a Disaster (2012)",
+              0.3123512864112854
+            ],
+            [
+              "Cloudy with a Chance of Meatballs (2009)",
+              0.3111702799797058
+            ],
+            [
+              "Stranger by the Lake (L'inconnu du lac) (2013)",
+              0.3083615303039551
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Blue Umbrella, The (2013)",
+              0.5058957934379578
+            ],
+            [
+              "Day & Night (2010)",
+              0.4060131013393402
+            ],
+            [
+              "L.A. Story (1991)",
+              0.4021029472351074
+            ],
+            [
+              "Car Wash (1976)",
+              0.38537710905075073
+            ],
+            [
+              "Good Old Fashioned Orgy, A (2011)",
+              0.3533923029899597
+            ],
+            [
+              "Garden of Words, The (Koto no ha no niwa) (2013)",
+              0.35327255725860596
+            ],
+            [
+              "Ice Storm, The (1997)",
+              0.35155925154685974
+            ],
+            [
+              "Midsommar (2019)",
+              0.34895819425582886
+            ],
+            [
+              "The Duke of Burgundy (2014)",
+              0.3464430272579193
+            ],
+            [
+              "Stray Dog (Nora inu) (1949)",
+              0.34291160106658936
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "something that feels like a rainy Sunday afternoon. A quiet, contemplative drama with a melancholic but gentle tone. Slow pacing with atmospheric cinematography, exploring themes of solitude, reflection, and finding peace in stillness. Characters navigating personal crossroads or quiet moments of connection, set against intimate or urban backdrops.",
+          "results": [
+            [
+              "Blue Umbrella, The (2013)",
+              0.5963079929351807
+            ],
+            [
+              "Day & Night (2010)",
+              0.5643474459648132
+            ],
+            [
+              "The Duke of Burgundy (2014)",
+              0.5022530555725098
+            ],
+            [
+              "Weekend (a.k.a. Le Week-end) (Week End) (1967)",
+              0.49400317668914795
+            ],
+            [
+              "L.A. Story (1991)",
+              0.49239581823349
+            ],
+            [
+              "It's a Disaster (2012)",
+              0.49066030979156494
+            ],
+            [
+              "Death at a Funeral (2007)",
+              0.48721539974212646
+            ],
+            [
+              "Maborosi (Maboroshi no hikari) (1995)",
+              0.4829437732696533
+            ],
+            [
+              "Naked (1993)",
+              0.4817194938659668
+            ],
+            [
+              "Informers, The (2008)",
+              0.47898417711257935
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "a movie that will make me ugly cry",
+      "type": "emotional",
+      "expected": [
+        "Schindler's List",
+        "The Green Mile",
+        "Up",
+        "Grave of the Fireflies",
+        "Life Is Beautiful"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "I Spit on Your Grave (2010)",
+              0.5007613301277161
+            ],
+            [
+              "Suicide Room (2011)",
+              0.4923917353153229
+            ],
+            [
+              "Anomalisa (2015)",
+              0.4907834827899933
+            ],
+            [
+              "The Final Girls (2015)",
+              0.463707834482193
+            ],
+            [
+              "Off the Map (2003)",
+              0.4625438451766968
+            ],
+            [
+              "Things We Lost in the Fire (2007)",
+              0.4598512649536133
+            ],
+            [
+              "Jeanne Dielman, 23 Quai du Commerce, 1080 Bruxelles (1975)",
+              0.4533436894416809
+            ],
+            [
+              "Repulsion (1965)",
+              0.4502639174461365
+            ],
+            [
+              "I Love You, I Love You Not (1996)",
+              0.45000171661376953
+            ],
+            [
+              "Stoker (2013)",
+              0.44978997111320496
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "I Spit on Your Grave (2010)",
+              0.5007613301277161
+            ],
+            [
+              "Suicide Room (2011)",
+              0.4923917353153229
+            ],
+            [
+              "Anomalisa (2015)",
+              0.4907834827899933
+            ],
+            [
+              "Suburbicon (2017)",
+              0.47922399640083313
+            ],
+            [
+              "Mr. Skeffington (1944)",
+              0.4706457257270813
+            ],
+            [
+              "The Final Girls (2015)",
+              0.463707834482193
+            ],
+            [
+              "Off the Map (2003)",
+              0.4625438451766968
+            ],
+            [
+              "Things We Lost in the Fire (2007)",
+              0.4598512649536133
+            ],
+            [
+              "Bad Teacher (2011)",
+              0.45560941100120544
+            ],
+            [
+              "Fear and Desire (1953)",
+              0.45559006929397583
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "a movie that will make me ugly cry. An emotionally devastating drama with powerful performances exploring profound themes of loss, sacrifice, love, or family bonds. Stories about terminal illness, grief, separation, or unexpected kindness in dark times that build emotional investment gradually before delivering a deeply moving climax. Films designed to strip away defenses and connect viscerally with the viewer's heart.",
+          "results": [
+            [
+              "I Spit on Your Grave (2010)",
+              0.5454797744750977
+            ],
+            [
+              "Maborosi (Maboroshi no hikari) (1995)",
+              0.5417231917381287
+            ],
+            [
+              "Anomalisa (2015)",
+              0.5258452296257019
+            ],
+            [
+              "The Eyes of My Mother (2016)",
+              0.5190032720565796
+            ],
+            [
+              "Martyrs (2008)",
+              0.5103880763053894
+            ],
+            [
+              "The Final Girls (2015)",
+              0.5096455812454224
+            ],
+            [
+              "Off the Map (2003)",
+              0.49937617778778076
+            ],
+            [
+              "Suicide Room (2011)",
+              0.49593108892440796
+            ],
+            [
+              "Things We Lost in the Fire (2007)",
+              0.4922668933868408
+            ],
+            [
+              "Repulsion (1965)",
+              0.4920452833175659
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "weird surreal film that messes with your head",
+      "type": "style+feeling",
+      "expected": [
+        "Mulholland Drive",
+        "Eraserhead",
+        "Donnie Darko",
+        "Being John Malkovich",
+        "Synecdoche, New York"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Phantom of Liberty, The (Fant\u00f4me de la libert\u00e9, Le) (1974)",
+              0.5747616291046143
+            ],
+            [
+              "V/H/S/2 (2013)",
+              0.55690997838974
+            ],
+            [
+              "The Taking of Deborah Logan (2014)",
+              0.5307616591453552
+            ],
+            [
+              "Super 8 (2011)",
+              0.5197621583938599
+            ],
+            [
+              "Ringu (Ring) (1998)",
+              0.5089161396026611
+            ],
+            [
+              "Images (1972)",
+              0.504672646522522
+            ],
+            [
+              "Shutter (2008)",
+              0.5038027763366699
+            ],
+            [
+              "Ghostbusters (a.k.a. Ghost Busters) (1984)",
+              0.4992498457431793
+            ],
+            [
+              "Thelma (2017)",
+              0.49807512760162354
+            ],
+            [
+              "Face to Face (Ansikte mot ansikte) (1976)",
+              0.496107816696167
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Phantom of Liberty, The (Fant\u00f4me de la libert\u00e9, Le) (1974)",
+              0.5747616291046143
+            ],
+            [
+              "V/H/S/2 (2013)",
+              0.55690997838974
+            ],
+            [
+              "The Taking of Deborah Logan (2014)",
+              0.5307616591453552
+            ],
+            [
+              "The Little Death (2014)",
+              0.5211834907531738
+            ],
+            [
+              "Super 8 (2011)",
+              0.5197621583938599
+            ],
+            [
+              "Survive Style 5+ (2004)",
+              0.5165619254112244
+            ],
+            [
+              "Ringu (Ring) (1998)",
+              0.5089161396026611
+            ],
+            [
+              "Vanilla Sky (2001)",
+              0.5057192444801331
+            ],
+            [
+              "Images (1972)",
+              0.504672646522522
+            ],
+            [
+              "Shutter (2008)",
+              0.5038027763366699
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "weird surreal film that messes with your head. A mind-bending psychological thriller with surrealist or avant-garde visual storytelling that deliberately disorients the viewer. Features unreliable narrators, fragmented timelines, or dream logic that blurs reality and hallucination. Unsettling atmosphere exploring themes of fractured identity, paranoia, perception, and existential dread\u2014designed to linger uncomfortably in the viewer's mind long after viewing.",
+          "results": [
+            [
+              "Phantom of Liberty, The (Fant\u00f4me de la libert\u00e9, Le) (1974)",
+              0.5788117051124573
+            ],
+            [
+              "Images (1972)",
+              0.5772345066070557
+            ],
+            [
+              "Shutter (2008)",
+              0.5657882690429688
+            ],
+            [
+              "Dead of Night (1945)",
+              0.5579025745391846
+            ],
+            [
+              "Altered States (1980)",
+              0.5516584515571594
+            ],
+            [
+              "Ringu (Ring) (1998)",
+              0.551051676273346
+            ],
+            [
+              "Paranormal Activity (2009)",
+              0.5389459729194641
+            ],
+            [
+              "Repeaters (2010) ",
+              0.534530520439148
+            ],
+            [
+              "Stir of Echoes (1999)",
+              0.5322020649909973
+            ],
+            [
+              "Thelma (2017)",
+              0.5316262245178223
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "cozy nostalgic movie from the 80s or 90s",
+      "type": "mood+era",
+      "expected": [
+        "The Princess Bride",
+        "Back to the Future",
+        "Home Alone",
+        "E.T.",
+        "The Goonies"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Last Laugh, The (Letzte Mann, Der) (1924)",
+              0.5488988161087036
+            ],
+            [
+              "Hush... Hush, Sweet Charlotte (1964)",
+              0.5222368240356445
+            ],
+            [
+              "Duplex (2003)",
+              0.5155624151229858
+            ],
+            [
+              "Honeymoon (2014)",
+              0.5101819038391113
+            ],
+            [
+              "Hot Tub Time Machine (2010)",
+              0.5087104439735413
+            ],
+            [
+              "Vacancy (2007)",
+              0.5079773664474487
+            ],
+            [
+              "Nell (1994)",
+              0.5025171637535095
+            ],
+            [
+              "Pacific Heights (1990)",
+              0.49477431178092957
+            ],
+            [
+              "Grumpy Old Men (1993)",
+              0.4830511510372162
+            ],
+            [
+              "2 Days in the Valley (1996)",
+              0.48289942741394043
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Last Laugh, The (Letzte Mann, Der) (1924)",
+              0.5488988161087036
+            ],
+            [
+              "Hush... Hush, Sweet Charlotte (1964)",
+              0.5222368240356445
+            ],
+            [
+              "Duplex (2003)",
+              0.5155624151229858
+            ],
+            [
+              "Coraline (2009)",
+              0.5102887153625488
+            ],
+            [
+              "Honeymoon (2014)",
+              0.5101819038391113
+            ],
+            [
+              "Hot Tub Time Machine (2010)",
+              0.5087104439735413
+            ],
+            [
+              "Vacancy (2007)",
+              0.5079773664474487
+            ],
+            [
+              "Make Way for Tomorrow (1937)",
+              0.5069599747657776
+            ],
+            [
+              "Nell (1994)",
+              0.5025171637535095
+            ],
+            [
+              "Pacific Heights (1990)",
+              0.49477431178092957
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "cozy nostalgic movie from the 80s or 90s. A warm, comfort-driven film from the 1980s or 1990s with gentle humor and heartfelt storytelling. Features intimate settings like small towns, family homes, or close-knit communities, with an emphasis on character relationships and simple pleasures. Soft cinematography, retro aesthetics, and a slower pace that evokes childhood memories or bygone era charm, celebrating connection over conflict.",
+          "results": [
+            [
+              "Last Laugh, The (Letzte Mann, Der) (1924)",
+              0.5324519872665405
+            ],
+            [
+              "Hush... Hush, Sweet Charlotte (1964)",
+              0.5249670147895813
+            ],
+            [
+              "Honeymoon (2014)",
+              0.5155715942382812
+            ],
+            [
+              "Italian for Beginners (Italiensk for begyndere) (2000)",
+              0.5056143403053284
+            ],
+            [
+              "Vacancy (2007)",
+              0.4970661997795105
+            ],
+            [
+              "Nell (1994)",
+              0.495012104511261
+            ],
+            [
+              "Antichrist (2009)",
+              0.49414458870887756
+            ],
+            [
+              "Singles (1992)",
+              0.48232555389404297
+            ],
+            [
+              "It Comes at Night (2017)",
+              0.4807683229446411
+            ],
+            [
+              "Make Way for Tomorrow (1937)",
+              0.4785211980342865
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "intense courtroom drama with incredible acting",
+      "type": "genre+quality",
+      "expected": [
+        "12 Angry Men",
+        "A Few Good Men",
+        "To Kill a Mockingbird",
+        "Primal Fear",
+        "The Verdict"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "...And Justice for All (1979)",
+              0.6244068145751953
+            ],
+            [
+              "Rainmaker, The (1997)",
+              0.6204231977462769
+            ],
+            [
+              "Pelican Brief, The (1993)",
+              0.6126514077186584
+            ],
+            [
+              "Suspect (1987)",
+              0.612072765827179
+            ],
+            [
+              "12 Angry Men (1997)",
+              0.604439377784729
+            ],
+            [
+              "Music Box (1989)",
+              0.6003502607345581
+            ],
+            [
+              "Few Good Men, A (1992)",
+              0.6003238558769226
+            ],
+            [
+              "12 Angry Men (1957)",
+              0.5968049764633179
+            ],
+            [
+              "Civil Action, A (1998)",
+              0.5903218388557434
+            ],
+            [
+              "Witness for the Prosecution (1957)",
+              0.5860760807991028
+            ]
+          ],
+          "expected_found": [
+            "12 Angry Men"
+          ]
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "...And Justice for All (1979)",
+              0.6244068145751953
+            ],
+            [
+              "Rainmaker, The (1997)",
+              0.6204231977462769
+            ],
+            [
+              "Pelican Brief, The (1993)",
+              0.6126514077186584
+            ],
+            [
+              "Suspect (1987)",
+              0.612072765827179
+            ],
+            [
+              "12 Angry Men (1997)",
+              0.604439377784729
+            ],
+            [
+              "Music Box (1989)",
+              0.6003502607345581
+            ],
+            [
+              "Few Good Men, A (1992)",
+              0.6003238558769226
+            ],
+            [
+              "12 Angry Men (1957)",
+              0.5968049764633179
+            ],
+            [
+              "Civil Action, A (1998)",
+              0.5903218388557434
+            ],
+            [
+              "Witness for the Prosecution (1957)",
+              0.5860760807991028
+            ]
+          ],
+          "expected_found": [
+            "12 Angry Men"
+          ]
+        },
+        "expanded": {
+          "expanded_query": "intense courtroom drama with incredible acting. A gripping legal thriller centered on high-stakes trials and moral dilemmas, driven by powerhouse performances from skilled actors. Features sharp dialogue, tension-filled arguments, and complex characters facing justice system pressures. The narrative builds suspense through investigation and courtroom confrontation, exploring themes of guilt, innocence, corruption, and the search for truth within a flawed legal system.",
+          "results": [
+            [
+              "...And Justice for All (1979)",
+              0.6805702447891235
+            ],
+            [
+              "Pelican Brief, The (1993)",
+              0.6758047342300415
+            ],
+            [
+              "Witness for the Prosecution (1957)",
+              0.65785813331604
+            ],
+            [
+              "12 Angry Men (1957)",
+              0.6564427614212036
+            ],
+            [
+              "12 Angry Men (1997)",
+              0.6510425209999084
+            ],
+            [
+              "Star Chamber, The (1983)",
+              0.6350799202919006
+            ],
+            [
+              "Music Box (1989)",
+              0.6298054456710815
+            ],
+            [
+              "Runaway Jury (2003)",
+              0.6284306645393372
+            ],
+            [
+              "Gett: The Trial of Viviane Amsalem (2014)",
+              0.6259408593177795
+            ],
+            [
+              "Rainmaker, The (1997)",
+              0.6193478107452393
+            ]
+          ],
+          "expected_found": [
+            "12 Angry Men"
+          ]
+        }
+      }
+    },
+    {
+      "query": "like Blade Runner meets Her",
+      "type": "comparative",
+      "expected": [
+        "Ex Machina",
+        "A.I.",
+        "Ghost in the Shell",
+        "Solaris",
+        "Eternal Sunshine"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Ocean's 8 (2018)",
+              0.5094256401062012
+            ],
+            [
+              "Everly (2014)",
+              0.46523550152778625
+            ],
+            [
+              "Klute (1971)",
+              0.44770684838294983
+            ],
+            [
+              "French Kiss (1995)",
+              0.4466360807418823
+            ],
+            [
+              "Little Bit of Heaven, A (2011)",
+              0.44622719287872314
+            ],
+            [
+              "Dressed to Kill (1980)",
+              0.4430422782897949
+            ],
+            [
+              "Legally Blonde (2001)",
+              0.4357750713825226
+            ],
+            [
+              "Dogville (2003)",
+              0.4356710910797119
+            ],
+            [
+              "Dying Young (1991)",
+              0.4354829490184784
+            ],
+            [
+              "Stuck (2007)",
+              0.43332451581954956
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Ocean's 8 (2018)",
+              0.5094256401062012
+            ],
+            [
+              "Blade: Trinity (2004)",
+              0.4663737416267395
+            ],
+            [
+              "Everly (2014)",
+              0.46523550152778625
+            ],
+            [
+              "Blade Runner 2049 (2017)",
+              0.46372634172439575
+            ],
+            [
+              "Klute (1971)",
+              0.44770684838294983
+            ],
+            [
+              "French Kiss (1995)",
+              0.4466360807418823
+            ],
+            [
+              "Little Bit of Heaven, A (2011)",
+              0.44622719287872314
+            ],
+            [
+              "The Shallows (2016)",
+              0.4461282789707184
+            ],
+            [
+              "Dressed to Kill (1980)",
+              0.4430422782897949
+            ],
+            [
+              "Boys on the Side (1995)",
+              0.4415273070335388
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "like Blade Runner meets Her. A sci-fi neo-noir exploring human connection in a technologically advanced, visually stunning dystopia. Blends existential themes about consciousness, identity, and what defines humanity with intimate, romantic tension between humans and artificial intelligence. Atmospheric cyberpunk aesthetics with contemplative pacing, featuring isolated protagonists navigating loneliness, desire, and philosophical questions about love and consciousness in a decay-tinged future world.",
+          "results": [
+            [
+              "Zero Theorem, The (2013)",
+              0.6214550733566284
+            ],
+            [
+              "Sleep Dealer (2008)",
+              0.6193944811820984
+            ],
+            [
+              "Blade Runner (1982)",
+              0.615325391292572
+            ],
+            [
+              "Transcendence (2014)",
+              0.5926069021224976
+            ],
+            [
+              "Ghost in the Shell (2017)",
+              0.5882034301757812
+            ],
+            [
+              "Electric Dreams (1984)",
+              0.5681649446487427
+            ],
+            [
+              "Surrogates (2009)",
+              0.5680050849914551
+            ],
+            [
+              "Matrix, The (1999)",
+              0.5612684488296509
+            ],
+            [
+              "Appleseed (Appurush\u00eedo) (2004)",
+              0.547525942325592
+            ],
+            [
+              "eXistenZ (1999)",
+              0.5424121618270874
+            ]
+          ],
+          "expected_found": [
+            "Ghost in the Shell"
+          ]
+        }
+      }
+    },
+    {
+      "query": "that anxious feeling when everything is about to fall apart",
+      "type": "abstract_emotion",
+      "expected": [
+        "Uncut Gems",
+        "Requiem for a Dream",
+        "Black Swan",
+        "Whiplash",
+        "Climax"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Wakefield (2017)",
+              0.3925650715827942
+            ],
+            [
+              "Face to Face (Ansikte mot ansikte) (1976)",
+              0.3462566137313843
+            ],
+            [
+              "Last Winter, The (2006)",
+              0.33482152223587036
+            ],
+            [
+              "Unsane (2018)",
+              0.33263543248176575
+            ],
+            [
+              "High Anxiety (1977)",
+              0.32899439334869385
+            ],
+            [
+              "Collateral Beauty (2016)",
+              0.3221558928489685
+            ],
+            [
+              "Fearless (1993)",
+              0.31276053190231323
+            ],
+            [
+              "Shut In (2015)",
+              0.30773767828941345
+            ],
+            [
+              "Don't Hug Me, I'm Scared II: Time (2014)",
+              0.2889788746833801
+            ],
+            [
+              "Reign Over Me (2007)",
+              0.2855526804924011
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Wakefield (2017)",
+              0.3925650715827942
+            ],
+            [
+              "Face to Face (Ansikte mot ansikte) (1976)",
+              0.3462566137313843
+            ],
+            [
+              "Last Winter, The (2006)",
+              0.33482152223587036
+            ],
+            [
+              "Unsane (2018)",
+              0.33263543248176575
+            ],
+            [
+              "High Anxiety (1977)",
+              0.32899439334869385
+            ],
+            [
+              "Collateral Beauty (2016)",
+              0.3221558928489685
+            ],
+            [
+              "Ju-on: The Grudge (2002)",
+              0.32086676359176636
+            ],
+            [
+              "Wood, The (1999)",
+              0.3157937824726105
+            ],
+            [
+              "Fearless (1993)",
+              0.31276053190231323
+            ],
+            [
+              "Independence Day (a.k.a. ID4) (1996)",
+              0.30978816747665405
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "that anxious feeling when everything is about to fall apart. A tense psychological thriller or drama with mounting dread and claustrophobic atmosphere. The narrative builds relentlessly toward catastrophe through fractured relationships, moral compromises, or circumstances spiraling beyond control. Features unreliable tension, fast-paced editing, and characters trapped by their own choices or external pressure, exploring themes of desperation, paranoia, and the fragility of stability.",
+          "results": [
+            [
+              "Ju-on: The Grudge (2002)",
+              0.6302635669708252
+            ],
+            [
+              "It Comes at Night (2017)",
+              0.6039233207702637
+            ],
+            [
+              "Take Shelter (2011)",
+              0.5916626453399658
+            ],
+            [
+              "Unsane (2018)",
+              0.588646650314331
+            ],
+            [
+              "Dread (2009)",
+              0.5831558108329773
+            ],
+            [
+              "Last Winter, The (2006)",
+              0.5782490372657776
+            ],
+            [
+              "Son's Room, The (Stanza del figlio, La) (2001)",
+              0.5728863477706909
+            ],
+            [
+              "Wakefield (2017)",
+              0.5705828666687012
+            ],
+            [
+              "Crimson Peak (2015)",
+              0.5673360824584961
+            ],
+            [
+              "Howling, The (1980)",
+              0.5625815987586975
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "beautiful foreign film about family",
+      "type": "quality+theme",
+      "expected": [
+        "Shoplifters",
+        "Roma",
+        "Parasite",
+        "Amour",
+        "The Farewell",
+        "Like Father, Like Son"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Day in the Country, A (Partie de campagne) (1936)",
+              0.6367822885513306
+            ],
+            [
+              "Cinema Paradiso (Nuovo cinema Paradiso) (1989)",
+              0.6352134943008423
+            ],
+            [
+              "South, The (Sur, El) (1983)",
+              0.6200116276741028
+            ],
+            [
+              "American Rhapsody, An (2001)",
+              0.6121802926063538
+            ],
+            [
+              "Mille bolle blu (1993)",
+              0.6113523244857788
+            ],
+            [
+              "Babel (2006)",
+              0.6096349954605103
+            ],
+            [
+              "Happy End (2017)",
+              0.6086101531982422
+            ],
+            [
+              "Rocco and His Brothers (Rocco e i suoi fratelli) (1960)",
+              0.6028054356575012
+            ],
+            [
+              "Landscape in the Mist (Topio stin omichli) (1988)",
+              0.5896643400192261
+            ],
+            [
+              "Suburbicon (2017)",
+              0.5858740210533142
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Day in the Country, A (Partie de campagne) (1936)",
+              0.6367822885513306
+            ],
+            [
+              "Cinema Paradiso (Nuovo cinema Paradiso) (1989)",
+              0.6352134943008423
+            ],
+            [
+              "South, The (Sur, El) (1983)",
+              0.6200116276741028
+            ],
+            [
+              "American Rhapsody, An (2001)",
+              0.6121802926063538
+            ],
+            [
+              "Mille bolle blu (1993)",
+              0.6113523244857788
+            ],
+            [
+              "Babel (2006)",
+              0.6096349954605103
+            ],
+            [
+              "Happy End (2017)",
+              0.6086101531982422
+            ],
+            [
+              "Sometimes Happiness, Sometimes Sorrow (Kabhi Khushi Kabhie Gham) (2001)",
+              0.6050287485122681
+            ],
+            [
+              "Rocco and His Brothers (Rocco e i suoi fratelli) (1960)",
+              0.6028054356575012
+            ],
+            [
+              "Landscape in the Mist (Topio stin omichli) (1988)",
+              0.5896643400192261
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "beautiful foreign film about family. An intimate, visually stunning drama from international cinema exploring complex family dynamics and emotional bonds. Character-driven narrative with poetic cinematography and a reflective pace, examining themes of heritage, reconciliation, generational conflict, or quiet moments of tenderness. Often featuring naturalistic performances and settings that ground universal human experiences in specific cultural contexts.",
+          "results": [
+            [
+              "Still Walking (Aruitemo aruitemo) (2008)",
+              0.643478274345398
+            ],
+            [
+              "Cinema Paradiso (Nuovo cinema Paradiso) (1989)",
+              0.6359034180641174
+            ],
+            [
+              "Lovely & Amazing (2001)",
+              0.6217840313911438
+            ],
+            [
+              "Babel (2006)",
+              0.6154580116271973
+            ],
+            [
+              "American Rhapsody, An (2001)",
+              0.6018403768539429
+            ],
+            [
+              "Me You Them (Eu, Tu, Eles) (2000)",
+              0.5881792306900024
+            ],
+            [
+              "Rocco and His Brothers (Rocco e i suoi fratelli) (1960)",
+              0.5857141613960266
+            ],
+            [
+              "South, The (Sur, El) (1983)",
+              0.5757096409797668
+            ],
+            [
+              "Impossible, The (Imposible, Lo) (2012)",
+              0.5756624937057495
+            ],
+            [
+              "Happy End (2017)",
+              0.5731408596038818
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "a smart movie that respects the audience's intelligence",
+      "type": "meta_quality",
+      "expected": [
+        "Primer",
+        "Arrival",
+        "The Prestige",
+        "Inception",
+        "Zodiac",
+        "Tinker Tailor Soldier Spy"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Tau",
+              0.5505931973457336
+            ],
+            [
+              "Charly (1968)",
+              0.5339821577072144
+            ],
+            [
+              "Idiots, The (Idioterne) (1998)",
+              0.5324900150299072
+            ],
+            [
+              "Rise of the Planet of the Apes (2011)",
+              0.4897487759590149
+            ],
+            [
+              "Real Genius (1985)",
+              0.48812612891197205
+            ],
+            [
+              "Chronicle (2012)",
+              0.48718059062957764
+            ],
+            [
+              "Smart House (1999)",
+              0.48673582077026367
+            ],
+            [
+              "Easy Riders, Raging Bulls: How the Sex, Drugs and Rock 'N' Roll Generation Saved Hollywood (2003)",
+              0.48079147934913635
+            ],
+            [
+              "Pi (1998)",
+              0.4789491891860962
+            ],
+            [
+              "Room 237 (2012)",
+              0.4788748621940613
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Tau",
+              0.5505931973457336
+            ],
+            [
+              "Charly (1968)",
+              0.5339821577072144
+            ],
+            [
+              "Idiots, The (Idioterne) (1998)",
+              0.5324900150299072
+            ],
+            [
+              "Midnight Madness (1980)",
+              0.49461257457733154
+            ],
+            [
+              "Rise of the Planet of the Apes (2011)",
+              0.4897487759590149
+            ],
+            [
+              "Real Genius (1985)",
+              0.48812612891197205
+            ],
+            [
+              "Chronicle (2012)",
+              0.48718059062957764
+            ],
+            [
+              "Smart House (1999)",
+              0.48673582077026367
+            ],
+            [
+              "Easy Riders, Raging Bulls: How the Sex, Drugs and Rock 'N' Roll Generation Saved Hollywood (2003)",
+              0.48079147934913635
+            ],
+            [
+              "Recruit, The (2003)",
+              0.47964543104171753
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "a smart movie that respects the audience's intelligence. A sophisticated film with intricate plotting, layered dialogue, and thematic depth that assumes viewer engagement and intelligence. Complex narratives that reward close attention, featuring morally ambiguous characters and philosophical questions rather than spoon-fed answers. Intelligent screenwriting, subtle foreshadowing, and visual storytelling that trusts audiences to draw their own conclusions without heavy exposition.",
+          "results": [
+            [
+              "Room 237 (2012)",
+              0.5171413421630859
+            ],
+            [
+              "Tau",
+              0.4928516745567322
+            ],
+            [
+              "Knight and Day (2010)",
+              0.4623326063156128
+            ],
+            [
+              "Charly (1968)",
+              0.46125346422195435
+            ],
+            [
+              "Pi (1998)",
+              0.45841628313064575
+            ],
+            [
+              "Recruit, The (2003)",
+              0.4572042226791382
+            ],
+            [
+              "Idiots, The (Idioterne) (1998)",
+              0.45311906933784485
+            ],
+            [
+              "Easy Riders, Raging Bulls: How the Sex, Drugs and Rock 'N' Roll Generation Saved Hollywood (2003)",
+              0.4448503851890564
+            ],
+            [
+              "Rise of the Planet of the Apes (2011)",
+              0.4407758116722107
+            ],
+            [
+              "Where's Marlowe? (1998)",
+              0.4377487599849701
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    },
+    {
+      "query": "something dark and atmospheric with amazing cinematography",
+      "type": "style+mood",
+      "expected": [
+        "Blade Runner 2049",
+        "The Revenant",
+        "Sicario",
+        "No Country for Old Men",
+        "There Will Be Blood"
+      ],
+      "approaches": {
+        "baseline": {
+          "results": [
+            [
+              "Blow-Up (Blowup) (1966)",
+              0.5805119276046753
+            ],
+            [
+              "Final Destination (2000)",
+              0.5638657808303833
+            ],
+            [
+              "Odd Thomas (2013)",
+              0.5626462697982788
+            ],
+            [
+              "Mandy (2018)",
+              0.5550975799560547
+            ],
+            [
+              "Dark Skies (2013)",
+              0.549612283706665
+            ],
+            [
+              "Suspiria (2017)",
+              0.5472651124000549
+            ],
+            [
+              "Kaena: The Prophecy (Kaena: La proph\u00e9tie) (2003)",
+              0.541095495223999
+            ],
+            [
+              "[REC]\u00b2 (2009)",
+              0.5396673679351807
+            ],
+            [
+              "[REC] (2007)",
+              0.5371695160865784
+            ],
+            [
+              "Village, The (2004)",
+              0.5329673886299133
+            ]
+          ],
+          "expected_found": []
+        },
+        "fine_tuned": {
+          "results": [
+            [
+              "Blow-Up (Blowup) (1966)",
+              0.5805119276046753
+            ],
+            [
+              "Midnight Meat Train, The (2008)",
+              0.5713827610015869
+            ],
+            [
+              "Final Destination (2000)",
+              0.5638657808303833
+            ],
+            [
+              "Odd Thomas (2013)",
+              0.5626462697982788
+            ],
+            [
+              "Business of Strangers, The (2001)",
+              0.561695396900177
+            ],
+            [
+              "Mandy (2018)",
+              0.5550975799560547
+            ],
+            [
+              "Dark Skies (2013)",
+              0.549612283706665
+            ],
+            [
+              "Suspiria (2017)",
+              0.5472651124000549
+            ],
+            [
+              "Kaena: The Prophecy (Kaena: La proph\u00e9tie) (2003)",
+              0.541095495223999
+            ],
+            [
+              "[REC]\u00b2 (2009)",
+              0.5396673679351807
+            ]
+          ],
+          "expected_found": []
+        },
+        "expanded": {
+          "expanded_query": "something dark and atmospheric with amazing cinematography. A visually stunning film with moody, shadowy cinematography that prioritizes aesthetic atmosphere over conventional narrative pace. Gothic or noir-influenced visual style with rich color grading, striking compositions, and meticulous framing that creates a sense of dread or unease. Stories set in gritty, decaying, or isolated environments where the environment itself becomes a character\u2014exploring themes of corruption, obsession, or psychological darkness.",
+          "results": [
+            [
+              "Suspiria (2017)",
+              0.6145023703575134
+            ],
+            [
+              "Insidious (2010)",
+              0.6097583770751953
+            ],
+            [
+              "Crimson Peak (2015)",
+              0.5914406180381775
+            ],
+            [
+              "Shutter (2008)",
+              0.5866695642471313
+            ],
+            [
+              "Paranormal Activity (2009)",
+              0.5795766711235046
+            ],
+            [
+              "Blow-Up (Blowup) (1966)",
+              0.5770763158798218
+            ],
+            [
+              "Fear[s] of the Dark (Peur[s] du noir) (2007)",
+              0.5734532475471497
+            ],
+            [
+              "It Comes at Night (2017)",
+              0.5664845108985901
+            ],
+            [
+              "The Hallow (2015)",
+              0.5585486888885498
+            ],
+            [
+              "After.Life (2009)",
+              0.5554847717285156
+            ]
+          ],
+          "expected_found": []
+        }
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "hits": 5,
+      "total_expected": 80,
+      "queries_with_hit": 5
+    },
+    "fine_tuned": {
+      "hits": 4,
+      "total_expected": 80,
+      "queries_with_hit": 4
+    },
+    "expanded": {
+      "hits": 4,
+      "total_expected": 80,
+      "queries_with_hit": 4
+    }
+  }
+}
