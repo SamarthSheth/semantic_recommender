@@ -1,8 +1,9 @@
 # Semantic Movie Recommender
 
-Natural language movie recommendations powered by semantic search. Type a vibe, get movies.
+Natural language movie recommendations powered by semantic search. Type a vibe, get movies. This recommender will likely struggle to provide 'accurate' suggestions on queries like "best movie of all time" but will do well on something like:
 
-> "something melancholic but beautiful, like Lost in Translation" → retrieves quiet, atmospheric films
+> "something melancholic but beautiful, like Lost in Translation" → retrieves quiet, atmospheric films such as Maborosi, Central Station, The Postman (Il Postino), The Man Without a Past
+> "psychedelic trip" -> retrieves hallucinatory / sensory overload / altered consciousness films such as Enter the Void, The Trip (1967), Altered States, A Field in England
 
 ## Architecture
 
