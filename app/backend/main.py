@@ -3,20 +3,10 @@ Recommendation API.
 
 Minimal backend that loads the precomputed FAISS index and serves
 nearest-neighbor retrieval over natural language queries.
-
-Design decisions:
-- Load model + index at startup (not per-request). The sentence-transformer
-  is ~80MB in memory and takes ~2s to load. Loading once at startup means
-  query latency is just encode time + FAISS search (~50ms total).
-- Return metadata with results so the frontend doesn't need a separate
-  database lookup.
-- Include similarity scores — useful for debugging and for the frontend
-  to show confidence.
-
-Run with: uvicorn app.backend.main:app --reload
 """
 
 import json
+import os
 from pathlib import Path
 from contextlib import asynccontextmanager
 
@@ -27,26 +17,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from sentence_transformers import SentenceTransformer
-import os
 
-# After your existing imports, replace the CORS block:
-ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173").split(",")
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# ── Paths (relative to project root) ────────────────────────────────
-# In production these would come from env vars or the config.
-# Hardcoded here for simplicity during development.
+# ── Paths ────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 EMBEDDINGS_DIR = PROJECT_ROOT / "data" / "embeddings"
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 
-# ── Global state (loaded at startup) ────────────────────────────────
+# ── Global state (loaded at startup) ─────────────────────────────────
 model: SentenceTransformer = None
 index: faiss.Index = None
 movie_ids: list[int] = []
@@ -55,14 +32,6 @@ movies_lookup: dict[int, dict] = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """
-    Load model and index once at startup.
-
-    Why a lifespan handler instead of module-level loading:
-    - Startup errors get clean error messages
-    - Works correctly with uvicorn --reload (reloads model on code change)
-    - Async-compatible if we ever need async model loading
-    """
     global model, index, movie_ids, movies_lookup
 
     print("Loading sentence-transformer model...")
@@ -93,29 +62,34 @@ async def lifespan(app: FastAPI):
 
     print(f"Ready: {index.ntotal} movies indexed")
     yield
-    # Cleanup (nothing to do for now)
 
 
+# ── App ──────────────────────────────────────────────────────────────
 app = FastAPI(
     title="Semantic Movie Recommender",
     description="Natural language movie recommendations via semantic search",
     lifespan=lifespan,
 )
 
-# CORS: allow the React frontend (running on a different port) to call us
+# CORS — env var for production, localhost fallback for dev
+ALLOWED_ORIGINS = os.environ.get(
+    "ALLOWED_ORIGINS",
+    "http://localhost:3000,http://localhost:5173"
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-# ── Request/Response schemas ────────────────────────────────────────
+# ── Schemas ──────────────────────────────────────────────────────────
 
 class RecommendRequest(BaseModel):
-    query: str = Field(..., min_length=1, max_length=1000, description="Natural language description")
-    top_k: int = Field(default=10, ge=1, le=50, description="Number of results")
+    query: str = Field(..., min_length=1, max_length=1000)
+    top_k: int = Field(default=10, ge=1, le=50)
 
 
 class MovieResult(BaseModel):
@@ -136,32 +110,28 @@ class RecommendResponse(BaseModel):
     results: list[MovieResult]
 
 
-# ── Endpoints ───────────────────────────────────────────────────────
+# ── Endpoints ────────────────────────────────────────────────────────
+
+@app.get("/health")
+async def health():
+    if index is None:
+        return {"status": "loading"}
+    return {"status": "ok", "movies_indexed": index.ntotal}
+
 
 @app.post("/recommend", response_model=RecommendResponse)
 async def recommend(req: RecommendRequest):
-    """
-    Core recommendation endpoint.
-
-    Flow:
-    1. Encode the query string into the same embedding space as the movies
-    2. Find the top_k nearest movie embeddings via FAISS
-    3. Return movie metadata + similarity scores
-    """
-    # Encode query
     query_vec = model.encode(
         [req.query],
         normalize_embeddings=True,
     ).astype(np.float32)
 
-    # FAISS search
     scores, indices = index.search(query_vec, req.top_k)
 
-    # Build response
     results = []
     for score, idx in zip(scores[0], indices[0]):
         if idx == -1:
-            continue  # FAISS returns -1 for empty slots
+            continue
         tmdb_id = movie_ids[idx]
         info = movies_lookup.get(tmdb_id, {})
         if info:
@@ -171,11 +141,3 @@ async def recommend(req: RecommendRequest):
             ))
 
     return RecommendResponse(query=req.query, results=results)
-
-
-@app.get("/health")
-async def health():
-    return {
-        "status": "ok",
-        "movies_indexed": index.ntotal if index else 0,
-    }
