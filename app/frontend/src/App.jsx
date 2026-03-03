@@ -19,26 +19,32 @@ export default function SemanticSearch() {
     return () => document.head.removeChild(style);
   }, []);
 
+  const API_URL = (import.meta.env.VITE_API_URL || "http://localhost:8000").replace(/\/$/, "");
+
   const handleSearch = async (overrideQuery) => {
-    const q = overrideQuery || query;
-    if (!q.trim()) return;
-    setLoading(true);
-    setSearched(true);
-    setActiveQuery(q);
-    try {
-      const res = await fetch("http://localhost:8000/recommend", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: q.trim(), top_k: 8 }),
-      });
-      const data = await res.json();
-      setResults(data.results || []);
-    } catch (err) {
-      console.error(err);
-      setResults([]);
-    }
+  const q = overrideQuery || query;
+  if (!q.trim()) return;
+
+  setLoading(true);
+  setSearched(true);
+  setActiveQuery(q);
+
+  try {
+    const res = await fetch(`${API_URL}/recommend`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: q.trim(), top_k: 8 }),
+    });
+
+    const data = await res.json();
+    setResults(data.results || []);
+  } catch (err) {
+    console.error(err);
+    setResults([]);
+  } finally {
     setLoading(false);
-  };
+  }
+};
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") handleSearch();
