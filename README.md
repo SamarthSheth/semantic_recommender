@@ -1,6 +1,6 @@
-# Semantic Movie Recommender
+# nebula - a Semantic Movie Recommender
 
-Natural language movie recommendations powered by semantic search. Type a vibe, get movies. This recommender will likely struggle to provide 'accurate' suggestions on queries like "best movie of all time" but will do well on something like:
+Natural language movie recommendations powered by semantic search. Type the vibe you're looking for into nebula and get movie recommendations. Nebula will likely struggle to provide 'accurate' suggestions on queries like "best movie of all time" but will do well on something like:
 
 > "something melancholic but beautiful, like Lost in Translation" → retrieves quiet, atmospheric films such as Maborosi, Central Station, The Postman (Il Postino), The Man Without a Past
 
