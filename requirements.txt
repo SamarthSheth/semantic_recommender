@@ -1,10 +1,17 @@
-fastapi
-uvicorn[standard]
-pandas
-numpy
-faiss-cpu
-sentence-transformers
-
-# Force CPU-only PyTorch (prevents nvidia/cuda deps on Railway)
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.2.2+cpu
+
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+
+#  CPU-only torch from the PyTorch CPU index above
+numpy<2
+torch>=2.4.0,<2.6
+sentence-transformers>=3.0.0,<4.0
+transformers>=4.40.0,<5.0
+
+# Data
+faiss-cpu>=1.7.0,<2.0
+pandas>=2.0.0,<3.0
+pyarrow>=14.0.0
