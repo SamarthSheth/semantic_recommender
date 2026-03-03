@@ -1,0 +1,25 @@
+#local environments
+.venv/
+venv/
+env/
+
+# never ship git metadata
+.git/
+
+# never ship node stuff
+node_modules/
+dist/
+build/
+
+# ignore big local raw data / caches
+data/raw/
+data/tmp/
+data/cache/
+
+# keep the essential artifacts you ARE tracking
+# (no need to "include" them if you don't ignore data/)
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
