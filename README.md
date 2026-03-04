@@ -79,3 +79,19 @@ Each step is idempotent and checkpointed. See `docs/DATA_DECISIONS.md` for ratio
 - [ ] JAX reimplementation + benchmarking
 - [ ] Systematic evaluation (NDCG, ablations, embedding analysis)
 - [ ] Research writeup
+   
+
+
+            _           _       
+ _ __   ___| |__  _   _| | __ _ 
+| '_ \ / _ \ '_ \| | | | |/ _` |
+| | | |  __/ |_) | |_| | | (_| |
+|_| |_|\___|_.__/ \__,_|_|\__,_|
+                                
+
+
+
+    
+                                                      
+                                                      
+                                                      
