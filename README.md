@@ -7,6 +7,8 @@ Natural language movie recommendations powered by semantic search. Type the vibe
 
 > "psychedelic trip" -> retrieves hallucinatory / sensory overload / altered consciousness films such as Enter the Void, The Trip (1967), Altered States, A Field in England
 
+the current deployment is a frozen version and is not using the llm to expand user prompts - however it still has access to the llm enriched movie descriptions. 
+
 ## Architecture
 
 ```
@@ -79,6 +81,32 @@ Each step is idempotent and checkpointed. See `docs/DATA_DECISIONS.md` for ratio
 - [ ] JAX reimplementation + benchmarking
 - [ ] Systematic evaluation (NDCG, ablations, embedding analysis)
 - [ ] Research writeup
+
+'''
+some experiments i've ran so far:
+
+movies_final.parquet
+       │
+       ├──────────────────────────────────────────────┐
+       │                                              │
+       ▼                                              ▼
+[Idea 1: Document Enrichment]              [Idea 2: Contrastive Fine-tuning]
+Claude Haiku generates experiential        TMDB reviews → training pairs
+"vibes" descriptions for each movie        (query=review chunk, positive=movie doc)
+appended to existing documents                      │
+       │                                    hard negative mining via FAISS
+       ▼                                            │
+movies_enriched.parquet                     InfoNCE loss, learnable temperature
+re-embedded → new FAISS index                       │
+                                            fine-tuned all-MiniLM-L6-v2
+                                                    │
+                                            rebuilt FAISS index
+                                            
+       
+[Idea 3: Query Expansion]                  [Idea 4: LLM Reranking]
+Claude Haiku rewrites user query           FAISS retrieves top-50 candidates
+into film-critic vocabulary                Claude Haiku reads all 50 + query
+before embedding                           reranks → top-10 results
 
 ```
  _   _      _           _
