@@ -155,8 +155,8 @@ export default function SemanticSearch() {
             ...styles.chips,
             ...(searched ? styles.chipsHidden : {}),
           }}>
-            {["something cozy for a rainy day", "mind-bending sci-fi",
-              "movies like Blade Runner", "a heist gone wrong"].map((s) => (
+            {["something melancholic but beautiful", "mind-bending sci-fi",
+              "psychedelic trip", "a heist gone wrong"].map((s) => (
               <button key={s} style={styles.chip}
                 onClick={() => { setQuery(s); handleSearch(s); }}
                 onMouseEnter={(e) => {
