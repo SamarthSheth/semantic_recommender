@@ -82,31 +82,40 @@ Each step is idempotent and checkpointed. See `docs/DATA_DECISIONS.md` for ratio
 - [ ] Systematic evaluation (NDCG, ablations, embedding analysis)
 - [ ] Research writeup
 
+## current directions
 '''
-some experiments i've ran so far:
+some experiments i've ran/am running so far:
+## Retrieval Pipeline Diagram
 
-movies_final.parquet
-       │
-       ├──────────────────────────────────────────────┐
-       │                                              │
-       ▼                                              ▼
-[Idea 1: Document Enrichment]              [Idea 2: Contrastive Fine-tuning]
-Claude Haiku generates experiential        TMDB reviews → training pairs
-"vibes" descriptions for each movie        (query=review chunk, positive=movie doc)
-appended to existing documents                      │
-       │                                    hard negative mining via FAISS
-       ▼                                            │
-movies_enriched.parquet                     InfoNCE loss, learnable temperature
-re-embedded → new FAISS index                       │
-                                            fine-tuned all-MiniLM-L6-v2
-                                                    │
-                                            rebuilt FAISS index
-                                            
-       
-[Idea 3: Query Expansion]                  [Idea 4: LLM Reranking]
-Claude Haiku rewrites user query           FAISS retrieves top-50 candidates
-into film-critic vocabulary                Claude Haiku reads all 50 + query
-before embedding                           reranks → top-10 results
+```text
+                               movies_final.parquet
+                                       │
+            ┌──────────────────────────┴──────────────────────────┐
+            │                                                     │
+            ▼                                                     ▼
+   [Idea 1: Document Enrichment]                        [Idea 2: Contrastive Fine-tuning]
+   Claude Haiku adds “vibes” / experiential             TMDB reviews → weakly-supervised pairs
+   descriptors to each movie document                   (anchor=review chunk, positive=movie doc)
+            │                                                     │
+            ▼                                                     ▼
+   movies_enriched.parquet                               Hard negative mining (FAISS)
+            │                                                     │
+            ▼                                                     ▼
+   Re-embed enriched docs → build FAISS index             Train with InfoNCE (+ learnable temperature)
+            │                                                     │
+            ▼                                                     ▼
+   (Used for retrieval)                                   Fine-tuned all-MiniLM-L6-v2
+                                                          │
+                                                          ▼
+                                                  Rebuild FAISS index (fine-tuned embeddings)
+
+
+   [Idea 3: Query Expansion]                              [Idea 4: LLM Reranking]
+   Claude Haiku rewrites the user query                   FAISS retrieves top-50 candidates
+   (e.g., “a movie that will make me cry”)                Claude Haiku scores candidates vs query
+   into film-critic language before embedding             reranks → return top-10
+
+
 ```
 
 ```
