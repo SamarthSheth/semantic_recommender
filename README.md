@@ -107,6 +107,7 @@ re-embedded → new FAISS index                       │
 Claude Haiku rewrites user query           FAISS retrieves top-50 candidates
 into film-critic vocabulary                Claude Haiku reads all 50 + query
 before embedding                           reranks → top-10 results
+```
 
 ```
  _   _      _           _
@@ -115,7 +116,7 @@ before embedding                           reranks → top-10 results
 | |\  |  __/ |_) | |_| | | (_| |
 |_| \_|\___|_.__/ \__,_|_|\__,_|
 
-
+```
     
                                                       
                                                       
