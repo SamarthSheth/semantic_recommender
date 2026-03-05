@@ -8,18 +8,17 @@ Stage 2: LLM reads the query + all 50 movie descriptions and picks
 Why this should work dramatically better:
 
 The embedding model compresses a movie's entire description into 384
-numbers. Inevitably, nuance is lost. "Unreliable narrator" and "alter
+numbers. "Unreliable narrator" and "alter
 ego" might be close-ish in embedding space, but not close enough to
 beat a movie that literally contains the word "thriller."
 
 An LLM doesn't have this compression problem. It reads the full text
 of all 50 candidates and REASONS about which ones match the query.
 It knows that "dual identity" and "alter ego" and "breaking the
-fourth wall" are hallmarks of an unreliable narrator story. It knows
-that "cozy nostalgic 80s movie" matches The Princess Bride even though
+fourth wall" are hallmarks of an unreliable narrator story. It should also (hopefully) 
+capture that "cozy nostalgic 80s movie" matches The Princess Bride even though
 the plot description talks about swordfighting and kidnapping.
 
-This is the industry standard approach:
 - Stage 1 (retrieval): fast but imprecise, gets you in the right neighborhood
 - Stage 2 (reranking): slow but precise, picks the best from that neighborhood
 

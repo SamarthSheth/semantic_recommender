@@ -5,9 +5,6 @@ Compare three retrieval approaches side-by-side:
 2. FINE-TUNED:       Contrastive fine-tuned embeddings, raw query
 3. QUERY EXPANSION:  Frozen embeddings, LLM-expanded query
 
-This is the centerpiece comparison for your research writeup.
-It answers: where does the improvement come from — better embeddings
-or better queries?
 
 Usage:
     export ANTHROPIC_API_KEY="your-key"

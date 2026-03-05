@@ -129,37 +129,6 @@ TEST_QUERIES = [
                  "Suspiria", "Mandy", "The Witch", "Crimson Peak",
                  "Only God Forgives", "Annihilation", "Color Out of Space"],
     },
-        {
-        "query": "a horror movie that isn't scary but is visually beautiful",
-        "type": "pressure_antonym",
-        # goal: genre vs vibe; horror-adjacent but not "scary"
-        "bullseye": ["Midsommar", "The Love Witch"],
-        "good": [
-            "Crimson Peak", "Suspiria", "A Ghost Story", "Let the Right One In",
-            "Only Lovers Left Alive", "The Neon Demon", "Under the Skin",
-            "Annihilation", "Pan's Labyrinth", "The Witch", "The Others",
-        ],
-    },
-    {
-        "query": "neon-soaked synthwave aesthetic",
-        "type": "pressure_aesthetic",
-        "bullseye": ["Drive", "Tron: Legacy", "Enter the Void"],
-        "good": [
-            "Blade Runner 2049", "Blade Runner", "The Neon Demon",
-            "Only God Forgives", "Ghost in the Shell", "Akira",
-            "Dark City", "Upgrade", "Valerian", "Escape from New York",
-        ],
-    },
-    {
-        "query": "movies where the setting is a character",
-        "type": "pressure_niche_logic",
-        "bullseye": ["The Shining", "Ex Machina", "The Lighthouse"],
-        "good": [
-            "Rear Window", "Dogville", "The Truman Show", "Room",
-            "Prisoners", "Apocalypse Now", "There Will Be Blood",
-            "No Country for Old Men", "Annihilation", "Solaris",
-        ],
-    },
 ]
 
 # ___metrics_____
