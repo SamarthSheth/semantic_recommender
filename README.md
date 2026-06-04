@@ -84,9 +84,8 @@ Each step is idempotent and checkpointed. See `docs/DATA_DECISIONS.md` for ratio
 
 ## Aknowledgements:
 
-I used AI to help me with this project.
-'''
-some experiments i've ran/am running so far:
+I used AI to help me with the coding in this project. 
+
 ## Retrieval Pipeline Diagram
 
 ```text
