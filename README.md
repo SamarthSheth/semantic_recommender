@@ -82,7 +82,9 @@ Each step is idempotent and checkpointed. See `docs/DATA_DECISIONS.md` for ratio
 - [ ] Systematic evaluation (NDCG, ablations, embedding analysis)
 - [ ] Research writeup
 
-## current directions
+## Aknowledgements:
+
+I used AI to help me with this project.
 '''
 some experiments i've ran/am running so far:
 ## Retrieval Pipeline Diagram
