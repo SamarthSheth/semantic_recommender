@@ -16,15 +16,7 @@ The training loss uses in-batch negatives: for query_i, the positive
 is document_i, and the negatives are document_j for all j ≠ i.
 Hard negatives are additional negatives that are close in embedding
 space (and therefore harder to distinguish).
-
-== Why not just use sentence-transformers' built-in trainer? ==
-
-We could use `sentence_transformers.SentenceTransformer.fit()` with
-`InputExample` objects. But writing our own loop gives us:
-1. Full control over hard negative sampling strategy
-2. Custom logging and evaluation hooks
-3. The ability to implement the same loop in JAX for benchmarking
-4. It demonstrates deeper understanding than calling a library
+y
 """
 
 import json
