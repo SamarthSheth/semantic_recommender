@@ -16,27 +16,6 @@ This script orchestrates the full training pipeline:
     7. Run full retrieval evaluation on test set
     8. Save model, metrics, and learning curves
 
-== Training Strategy ==
-
-We use AdamW with linear warmup and cosine decay:
-
-    LR
-    ^
-    |    /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\
-    |   /                        \
-    |  /                          \
-    | /                            \
-    +--+-----+---------------------+--> steps
-       warmup        cosine decay
-
-- Warmup: prevents catastrophic forgetting in early steps by keeping
-  gradients small while the model adjusts to the new loss landscape.
-- Cosine decay: gradually reduces LR so the model converges smoothly
-  rather than oscillating around the optimum.
-
-This schedule is standard for fine-tuning transformers (used by
-HuggingFace, CLIP, etc.).
-
 == What gets saved ==
 
 models/{experiment_name}/
