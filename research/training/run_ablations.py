@@ -6,15 +6,6 @@ Usage:
     python run_ablations.py --only baseline no_hard_neg   # Run subset
     python run_ablations.py --skip-training    # Just compare existing results
 
-This is the script you run once and walk away. It:
-1. Trains each experiment configuration
-2. Evaluates each on the same test set
-3. Produces a summary table comparing all experiments
-4. Saves the table as a CSV for inclusion in your writeup
-
-The summary table is the centerpiece of your research section.
-A quant firm wants to see: "I changed X, performance changed by Y,
-with statistical significance Z." This script produces exactly that.
 """
 
 import argparse
